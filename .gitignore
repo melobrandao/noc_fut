@@ -1,0 +1,8 @@
+.env
+reports/*
+!reports/.gitkeep
+*.test
+coverage.out
+*.exe
+*.zip
+.DS_Store

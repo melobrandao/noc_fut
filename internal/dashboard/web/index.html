@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111413"><title>NOC FUT — sua central de futebol</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ccff70'/%3E%3Ctext x='7' y='24' font-size='24' font-family='Arial' font-weight='bold'%3EN%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script>
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="NOC FUT início"><span class="brand-mark">N<span>↗</span></span><span>NOC<span class="brand-light">FUT</span><small>FOOTBALL CONTROL ROOM</small></span></a>
+  <div class="nav-caption">SEU FUTEBOL</div>
+  <button class="nav-item active" id="nav-games"><span>▦</span> Central de jogos <b>01</b></button>
+  <button class="nav-item" id="nav-favorites"><span>☆</span> Meus favoritos <b id="fav-count">0</b></button>
+  <div class="nav-caption championships">CAMPEONATOS</div>
+  <div class="league-nav"><span class="brazil">BR</span><div>Brasileirão<small>Série A</small></div><span class="green-dot"></span></div>
+  <div class="sidebar-bottom"><div class="local-icon">⌁</div><div>Feito para rodar local<small>Go · sem serviços externos</small></div><span class="green-dot"></span></div>
+</aside>
+<main>
+  <header><div class="breadcrumb">Futebol <span>/</span> Brasil <span>/</span> <strong>Brasileirão Série A</strong></div><span class="local-badge"><i></i> LOCALHOST</span></header>
+  <section class="page-title"><div><div class="eyebrow">SEU JOGO. SUA CENTRAL.</div><h1>Futebol, sem distrações<span>.</span></h1><p>Acompanhe o Brasileirão do seu jeito.</p></div><div class="edition">BRASILEIRÃO<span>SÉRIE A <b>◆</b></span></div></section>
+  <div class="demo-banner"><span class="demo-label">MODO DEMO</span><span>Partidas, placares e jogadores fictícios. Explore a POC sem chave de API.</span><span class="offline-ready">● Funciona offline</span></div>
+  <section class="summary" aria-label="Resumo das partidas"><div><span class="summary-icon">▦</span><span>Partidas na amostra<strong id="total-count">—</strong></span></div><div><span class="summary-icon live-icon">◉</span><span>Em andamento · demo<strong id="live-count">—</strong></span></div><div><span class="summary-icon">◷</span><span>Próximos jogos<strong id="next-count">—</strong></span></div><div><span class="summary-icon">☆</span><span>Seus favoritos<strong id="summary-favs">0</strong></span></div></section>
+  <section class="workspace">
+    <div class="games-panel">
+      <div class="section-heading"><div><h2>Central de jogos <span>BR</span></h2><p>Amostra de rodadas · cenário demonstrativo</p></div><button id="refresh" class="icon-button" title="Recarregar dados" aria-label="Recarregar dados">↻</button></div>
+      <div class="filters"><label class="select-wrap"><span>TIME</span><select id="team-filter" aria-label="Filtrar por time"><option value="">Todos os times</option></select></label><label class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Buscar confronto…" aria-label="Buscar confronto"></label></div>
+      <div class="status-tabs" role="group" aria-label="Filtrar por situação"><button class="active" data-status="">Todos</button><button data-status="live"><i></i> Em jogo</button><button data-status="scheduled">Próximos</button><button data-status="finished">Encerrados</button></div>
+      <div class="list-caption"><span id="list-label">PARTIDAS DO VASCO</span><span id="result-count"></span></div>
+      <div id="match-list" aria-live="polite"><p class="empty">Carregando partidas…</p></div>
+      <div class="list-footer"><span class="green-dot"></span><span id="updated">Dados locais · sem atualização de placar em tempo real</span></div>
+    </div>
+    <section class="detail-panel" id="detail-panel" aria-label="Detalhes da partida"><div class="empty">Selecione uma partida para explorar.</div></section>
+  </section>
+  <footer><span>NOC FUT <span class="muted">/</span> Futebol em primeiro plano.</span><span>POC LOCAL <b>v0.1</b></span></footer>
+</main>
+</body></html>
